@@ -6,8 +6,9 @@ services:
     image: nginx
     container_name: nginx-proxy
     ports:
-      - 80:80
+      - 15070:80
     restart: unless-stopped
     volumes:
-      - ./nginx/config:/etc/nginx/conf.d
+      - ./srv1:/etc/nginx/conf.d
       - ./www:/var/www
+      - /var/log/nginx/:/var/log/nginx
