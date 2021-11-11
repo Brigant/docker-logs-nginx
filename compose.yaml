@@ -12,3 +12,6 @@ services:
       - ./srv1:/etc/nginx/conf.d
       - ./www:/var/www
       - /var/log/nginx/:/var/log/nginx
+    logging:
+      options:
+        max-size: 5k
